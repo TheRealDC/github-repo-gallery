@@ -13,7 +13,7 @@ const filterInput = document.querySelector(".filter-repos");
 const gitHubProfile = async function () {
     const response = await fetch(`https://api.github.com/users/${username}`);
     const profile = await response.json();
-    //console.log(profile);
+    console.log(profile);
     displayUserInfo(profile);
 };
 gitHubProfile();
@@ -23,7 +23,7 @@ const displayUserInfo = function (profile) {
     const div = document.createElement("div");
     div.classList.add("user-info");
     div.innerHTML = `<figure>
-        <img alt="user avatar" src=${profile.user_avatar} />
+        <img alt="user avatar" src=${profile.avatar_url} />
       </figure>
       <div>
         <p><strong>Name:</strong> ${profile.name}</p>
