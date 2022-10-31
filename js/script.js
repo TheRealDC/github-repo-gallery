@@ -23,7 +23,7 @@ const displayUserInfo = function (profile) {
     const div = document.createElement("div");
     div.classList.add("user-info");
     div.innerHTML = `<figure>
-        <img alt="user avatar" src=${profile.avatar_url} />
+        <img alt="picture of me" src=${profile.avatar_url} />
       </figure>
       <div>
         <p><strong>Name:</strong> ${profile.name}</p>
