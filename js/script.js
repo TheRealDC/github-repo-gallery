@@ -13,7 +13,7 @@ const filterInput = document.querySelector(".filter-repos");
 const gitHubProfile = async function () {
     const response = await fetch(`https://api.github.com/users/${username}`);
     const profile = await response.json();
-    console.log(profile);
+    //console.log(profile);
     displayUserInfo(profile);
 };
 gitHubProfile();
